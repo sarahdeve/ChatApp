@@ -1,0 +1,18 @@
+.bg {
+    background-image: url('/assets/images/chat2.jpg');
+    height: 100vh;
+}
+
+.ng-valid {
+    border-color: green !important;
+}
+.ng-invalid {
+    border-color: red !important;
+}
+.ng-touched {
+    border-color: brown !important;
+}
+.form-contol {
+    border-color: orangered !important;
+    border: none;
+}

@@ -1,0 +1,247 @@
+<div class="container bg-secondary">
+    <div class="row">
+        <div class="col-12 text-white w-100 h5 pb-2 pt-1" style="background-color: #013159;">
+            Chat
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-md-4 bg-light d-none d-md-block">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="/profile">
+                                        <img src="/assets/images/icons8_Male_User_52px_3.png" style="width: 40%;"
+                                            alt="">
+                                    </a>
+                                </div>
+
+
+
+
+
+                                <div class="col-2 ml-5 mt-3">
+                                    <a href=""><img class="ml-4" src="/assets/images/icons8_Loading_50px.png"
+                                            style="width: 60%;" alt=""></a>
+                                </div>
+                                <div class="col-2 mt-3">
+                                    <a href=""><img class="ml-2" src="/assets/images/icons8_Plus_64px.png"
+                                            style="width: 60%;" alt=""></a>
+                                </div>
+                                <!-- <div class="col-2 mt-3">
+                                    <a href=""></a>
+                                </div> -->
+                                <div class="col-2 mt-3">
+                                    <button type="button" class="" data-toggle="dropdown" data-target="#drop"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <img src="/assets/images/icons8_More_52px.png" style="width: 60%;" alt="">
+                                    </button>
+                                    <div class="dropdown-menu" id="drop">
+                                        <a class="dropdown-item" href="#">Create Group</a>
+                                        <a class="dropdown-item" href="/profile">Profile</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/home">Log Out</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2 mt-3">
+                                    <img class="ml-4 pl-1" src="/assets/images/icons8_Search_64px.png"
+                                        style="width: 90%;" alt="">
+                                    {{actUser.username}}
+                                </div>
+                                <div class="col-10 mt-3 pb-2">
+                                    <input class="pl-5 rounded-pill w-100 border-0 bg-white" style="outline: none;"
+                                        type="" placeholder="Search">
+                                </div>
+                                <div id="scroll" class="col-12">
+                                    <div class="row">
+                                        <div class="col-12 bg-white mt-2 pt-1">
+                                            <div class="row" *ngFor="let i = index, let x of userArray">
+                                                <div class="col-2 col-md-3">
+
+                                                    <a href=""><img src="assets/images/icons8_Male_User_52px_3.png"
+                                                            style="width: 50%;" alt=""></a>
+                                                </div>
+                                                <div class="col-7 col-md-6" (click)="receiver(x)">
+                                                    <span href="" style="text-decoration: none; color: black;">
+                                                        <h5>{{x.username}}</h5><br>
+                                                        <h6 style="margin-top: -12%;">{{x.phone}}</h6>
+                                                    </span>
+                                                </div>
+                                                <div class="col-3 col-md-3 d-sm-none d-md-block">
+                                                    00:09 <br>
+                                                    <h6><img class="mt-1"
+                                                            src="/assets/images/icons8_Circled_3_C_52px_1.png"
+                                                            style="width: 30%;" alt=""></h6>
+                                                </div>
+                                                <hr style="margin-left: 17%; width: 65%; margin-top: -1%;">
+                                            </div>
+                                            <div class="row">
+                                                <!-- <div class="col-2 col-md-3">
+                                                    <a href=""><img src="/assets/images/icons8_Male_User_52px_3.png"
+                                                            style="width: 50%;" alt=""></a>
+                                                </div>
+                                                <div class="col-7 col-md-6">
+                                                    <a href="" style="text-decoration: none; color: black;">
+                                                        <h5>SQI ICT GROUP</h5><br>
+                                                        <h6 style="margin-top: -12%;">+234 343 333 3929</h6>
+                                                    </a>
+                                                </div>
+                                                <div class="col-3 col-md-3 d-sm-none d-md-block">
+                                                    01:45 <br>
+                                                    <h6></h6>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 bg-light d-none d-lg-block" id="scr">
+                    <div class="row">
+                        <div class="col-12 bg-light pb-2">
+                            <div class="row bg">
+                                <div class=" col-md-8 col-md- d-flex flex-row">
+                                    <a href=""><img src="/assets/images/icons8_Male_User_52px_3.png" style="width: 80%;"
+                                            alt=""></a>
+                                    <a href="" style="text-decoration: none; color: #eee; margin-left: 2%;">
+                                        <h5>SQI ICT GROUP</h5>
+                                        <h6 class=" text-white" style="margin-top: -2%">Adebayo, victoria,
+                                            +2349039191010, +2348043... </h6>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-md- mt-2 ml-5">
+                                    <!-- <a href=""><img src="/assets/images/icons8_Search_64px.png" style="width: 15%;"
+                                            alt=""></a> -->
+                                    <input type="text" name="search" value="Search">
+                                    <a href=""><img class="ml-4" src="/assets/images/icons8_More_52px.png"
+                                            style="width: 15%;" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-4 ml-4">
+                        <div class="row ml-4">
+                            <div class="col-md-4 shadow"
+                                style="background-color: #013159; color: #eee; border-radius: 0 8px 8px 8px; clip-path: polygon(0 0, 100% 0, 100% 75%, 62% 76%, 80% 95%, 50% 75%, 0% 75%);  ">
+                                <div class="text-primary mt-1">
+                                    Adebayo sqi
+                                </div>
+                                <div class="mb-4">
+                                    any brand color <span class="text-white"
+                                        style="margin-left: 38%; margin-top: 2%; font-size: small;">08:34</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ml-4 mr-auto">
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-md-4 "
+                                style=" margin-left: -5%; color: #eee; background-color:#013159; border-radius: 0 8px 8px 8px; clip-path: polygon(0 0, 100% 0, 100% 75%, 62% 76%, 80% 95%, 50% 75%, 0% 75%);  ">
+                                <br>
+                                <div class="mb-4" *ngFor="let i = index, let y of messages">
+                                    {{y.Text}}<span class="text-dark"
+                                        style="margin-left: 58%; margin-top: 4%; margin-bottom: -2%; font-size: small;">08:34</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ml-4">
+                            <div class="col-md-4 shadow"
+                                style="background-color: #013159; color:#eee; border-radius: 0 8px 8px 8px; clip-path: polygon(0 0, 100% 0, 100% 75%, 62% 76%, 80% 95%, 50% 75%, 0% 75%);  ">
+                                <div class="text-primary mt-1">
+                                    Victoria sqi
+                                </div>
+                                <div class="mb-4">
+                                    is that all <span class="text-dark"
+                                        style="margin-left: 58%; font-size: small;">02:14</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="h6 pb-1 rounded text-center mx-auto"
+                                style="background-color: darkgrey; width: 10%;">
+                                Today
+                            </div>
+                        </div>
+                        <div class="row ml-4 mt-3">
+                            <div class="col-md-4 shadow"
+                                style="background-color: #013159; color: #eee; border-radius: 0 8px 8px 8px; clip-path: polygon(0 0, 100% 0, 100% 75%, 62% 76%, 80% 95%, 50% 75%, 0% 75%);  ">
+                                <div class="text-primary mt-1">
+                                    Adebayo sqi
+                                </div>
+                                <div class="mb-4">
+                                    where are you <span class="text-dark"
+                                        style="margin-left: 38%; margin-top: 2%; font-size: small;">04:44</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ml-4 mr-auto">
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-md-4"
+                                style=" margin-left: -5%; background-color: bisque; border-radius: 0 8px 8px 8px; clip-path: polygon(0 0, 100% 0, 100% 75%, 62% 76%, 80% 95%, 50% 75%, 0% 75%);  ">
+
+                                <div class="mb-4">
+                                    school <span class="text-dark"
+                                        style="margin-left: 60%; margin-top: 4%; margin-bottom: -2%; font-size: small;">08:34</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ml-4 mt-3">
+                            <div class="col-md-4 shadow"
+                                style="background-color: bisque; border-radius: 0 8px 8px 8px; clip-path: polygon(0 0, 100% 0, 100% 75%, 62% 76%, 80% 95%, 50% 75%, 0% 75%);  ">
+                                <div class="text-primary mt-1">
+                                    Tope
+                                </div>
+                                <div class="mb-4">
+                                    Good Evening<span class="text-dark"
+                                        style="margin-left: 38%; margin-top: 2%; font-size: small;">08:04</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row message">
+                            <div class="col-md-12 bg-light mt-2">
+                                <div class="row ml-5">
+                                    <div class="col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-3 pl-5">
+                                                <a href=""><img src="/assets/images/icons8_Happy_50px.png"
+                                                        style="width: 30%;" alt=""></a>
+                                                <a href=""><img src="/assets/images/icons8_Attach_50px.png"
+                                                        style="width: 30%;" alt=""></a>
+                                            </div>
+                                            <div class="col-7 d-flex flex-row">
+                                                <input type="" [(ngModel)]="userstext"
+                                                    class="rounded-pill pl-3 form-control" style=" outline: none;"
+                                                    width="100%" placeholder="Type a message">
+                                                &nbsp;
+                                                <button class="btn btn-sm btn-success" (click)="submit()">A</button>
+                                                <a href=""><img class="ml-4"
+                                                        src="/assets/images/icons8_Microphone_64px.png"
+                                                        style="width: 30px;" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+
+            </div>
+        </div>
+    </div>

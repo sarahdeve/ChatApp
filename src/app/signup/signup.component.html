@@ -1,0 +1,102 @@
+<div class="container-fluid bg">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <mat-card class="d-flex m-5 shadow" id="signup">
+                <div class="col-md-5 mt-5 p-5 border-right">
+                    <h2>Sign Up</h2>
+                    <p>Welcome to chatApp connect with friends and family.</p>
+                    <p>ON THE GO!</p>
+                </div>
+                <div class="col-md-7 mt-5 mb-5">
+
+                    <form action="" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                        <mat-form-field class="">
+                            <mat-label>Username</mat-label>
+                            <input matInput type="text" formControlName="username"
+                                [class.is-invalid]="signupForm.get('username').invalid"
+                                [class.is-valid]="signupForm.get('username').valid">
+                            <span class="text-danger"
+                                *ngIf="(signupFormControl.username.touched || submitted) && signupFormControl.username.errors?.required">
+                                Name is required
+                            </span>
+                        </mat-form-field>
+
+                        <!-- <mat-form-field class="">
+                            <mat-label>lastname</mat-label>
+                            <input matInput type="file" id="myfiles" formControlName="files"> -->
+                        <!-- <input type="file" (Change)="onChange($event)" />
+                        <mat-form-field>
+                            <input matInput formControlName="someFCN">
+                        </mat-form-field> -->
+
+
+                        <mat-form-field class="">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="email" formControlName="email"
+                                [class.is-invalid]="signupForm.get('email').invalid"
+                                [class.is-valid]="signupForm.get('email').valid">
+                            <span class="text-danger"
+                                *ngIf="(signupFormControl.email.touched || submitted) && signupFormControl.email.errors?.required">
+                                Email is required
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="signupFormControl.email.touched && signupFormControl.email.errors?.email">
+                                Enter a valid email address
+                            </span>
+                        </mat-form-field>
+
+                        <mat-form-field class="">
+                            <mat-label>Phone</mat-label>
+                            <input matInput type="" formControlName="phone"
+                                [class.is-invalid]="signupForm.get('phone').invalid"
+                                [class.is-valid]="signupForm.get('phone').valid">
+                            <div *ngIf="signupForm.get('phone').invalid">
+                                <span *ngIf="signupForm.get('phone').errors.minLength" class="text-danger">
+                                    Minimum allowed length is 10
+                                </span>
+                                <span *ngIf="signupForm.get('phone').errors.maxlength" class="text-danger">
+                                    MaxLength allowed length is 15
+                                </span>
+                            </div>
+                        </mat-form-field>
+
+                        <mat-form-field class="">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" formControlName="password"
+                                [class.is-invalid]="signupForm.get('phone').invalid"
+                                [class.is-valid]="signupForm.get('phone').valid" required>
+                            <span class="text-danger"
+                                *ngIf="(signupFormControl.password.touched || submitted) && signupFormControl.password.errors?.required">
+                                Password is required
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="signupFormControl.password.touched && signupFormControl.password.errors?.invalidPassword">
+                                Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                                letter and 1 number
+                            </span>
+                        </mat-form-field>
+
+                        <mat-form-field class="">
+                            <mat-label>Confirm Password</mat-label>
+                            <input matInput type="password" formControlName="confirmPassword">
+                            <span class="text-danger"
+                                *ngIf="(signupFormControl.confirmPassword.touched || submitted)&& signupFormControl.confirmPassword.errors?.required">
+                                Confirm Password is required
+                            </span>
+                            <span class="text-danger"
+                                *ngIf="signupFormControl.confirmPassword.touched && signupFormControl.confirmPassword.errors?.passwordMismatch">
+                                Passwords doesnot match
+                            </span>
+                        </mat-form-field>
+
+                        <br />
+                        <button mat-raised-button type="submit" >Sign up</button>
+                        &nbsp;
+                    </form>
+                    <p>Already have an account? <button class="btn btn-sm btn-primary" routerLink="/signin">Sign
+                            in</button></p>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

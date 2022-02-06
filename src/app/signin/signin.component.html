@@ -1,0 +1,37 @@
+<div class="container-fluid backg">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <mat-card class="d-flex m-5 shadow" id="signin">
+                <div class="col-md-6  p-5 border-right">
+                    <h2>Sign In</h2>
+                    <p>Welcome to chatApp connect with friends and family.</p>
+                    <p>ON THE GO!</p>
+                </div>
+                <div class="col-md-6 mt-5 mb-5">
+                    <div class="row">
+                        <div class="my-2 ml-3">
+                            <input type="text" class="form-control mb-2" [(ngModel)]="email" placeholder="Email..." />
+                            <input type="password" class="form-control mb-2" [(ngModel)]="password"
+                                placeholder="Password..." />
+                            <button class="btn btn-sm btn-primary" (click)="submit()" routerLink="/chat/chat">Sign
+                                In</button>
+                        </div>
+                        <span>Back to Sign up<span>&nbsp;&nbsp;</span><a routerLink="/signup">Sign Up.</a></span>
+                    </div>
+                    <!-- <form action="">
+                        <mat-form-field class="">
+                            <mat-label>Email</mat-label>
+                            <input matInput [(ngModel)]="email">
+                        </mat-form-field>
+                        <mat-form-field class="">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" name="password" [(ngModel)]="password">
+                        </mat-form-field>
+                        <br />
+                        <button mat-raised-button (click)="submit()" routerLink="/signin">Login</button>
+                    </form> -->
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
